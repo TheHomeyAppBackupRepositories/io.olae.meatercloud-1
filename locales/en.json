@@ -1,0 +1,44 @@
+{
+  "notifications": {
+    "login_successful": "Meater cloud app now successfully authenticated with Meater Cloud.",
+    "login_failed": "Login to Meater Cloud service failed. Please review app settings!"
+  },
+  "names": {
+    "meaterprobe": "MEATER probe"
+  },
+  "settings": {
+    "title": "Meater Cloud",
+    "subtitle": "Configure your meater cloud username and password in order to have Homey access your probes.",
+    "meatercloudauth": "Meater Cloud Authentication",
+    "email": "Email address",
+    "password": "Password",
+    "save": "Save settings"
+  },
+  "checkauth": {
+    "title": "Configure login details",
+    "information1": "In order for Homey to communicate with your MEATER probes, you need to register your MEATER Cloud credentials in this app.",
+    "information2": "After entering your credentials, please try to add the device again.",
+    "b1": "Find and click on the Meater Cloud App in the Homey Apps view.",
+    "b2": "Go to App settings for Meater Cloud.",
+    "b3": "Enter your MEATER cloud login details. Same account as you registered when setting up your first Meater probe."
+  },
+  "apiinfo": {
+    "title": "Important information",
+    "information1": "Communication with the MEATER probe is done via the MEATER Cloud API. Make sure you have signed up for a MEATER cloud account, enabled the feature in your MEATER app on your mobile device and entered your MEATER cloud credentials under settings.",
+    "information2": "Below is information from MEATER on how to get your probe enabled in the API:",
+    "information3": "Devices (aka MEATER probes) will only be returned after the following criteria is met. There may be a delay between the MEATER Cloud seeing your device and it being returned in this endpoint.",
+    "b1": "Device must be seen by the MEATER Cloud. Ensure you've completed a cook while connected to MEATER Cloud.",
+    "b2": "The MEATER app or Block must have an active Bluetooth connection with the device.",
+    "b3": "The MEATER app or Block must have an active MEATER Cloud connection."
+  },
+  "instructions": {
+    "title": "Activate your device",
+    "information1": "In order for your device to be registered with Homey, it first needs to be activated and made available via the MEATER Cloud API.",
+    "information2": "Follow the steps below in order to make your device available via MEATER Cloud API.",
+    "instructiontitle": "Activate device",
+    "b1": "Start the MEATER App on your mobile device.",
+    "b2": "Remove the probe from it's charger.",
+    "b3": "Wait for the probe to become active and available for usage in the MEATER App.",
+    "footer": "Once this is done, click Next to search for your device."
+  }
+}

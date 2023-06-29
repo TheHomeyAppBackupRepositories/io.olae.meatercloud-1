@@ -1,0 +1,44 @@
+{
+  "notifications": {
+    "login_successful": "Homey har nu upprättat en förbindelse med MEATER Cloud API.",
+    "login_failed": "Inloggningen mot MEATER Cloud API har misslyckats. Vänligen se över inställningarna i appen!"
+  },
+  "names": {
+    "meaterprobe": "MEATER köttermometer"
+  },
+  "settings": {
+    "title": "MEATER Cloud",
+    "subtitle": "Fyll i dina loginuppgifter till MEATER Cloud för att ge Homey tillgång till dina enheter.",
+    "meatercloudauth": "Inloggning till MEATER Cloud",
+    "email": "Epost",
+    "password": "Lösenord",
+    "save": "Spara inställningar"
+  },
+  "checkauth": {
+    "title": "Konfigurera ditt konto",
+    "information1": "För att få kontakt med dina MEATER enheter behöver du registrera dina login uppgifter för MEATER cloud.",
+    "information2": "När du har gjort detta kan du försöka att lägga till enheten igen.",
+    "b1": "Leta upp appen Meater Cloud i Homey.",
+    "b2": "Gå in under inställningar för appen.",
+    "b3": "Fyll i dina loginuppgifter för MEATER cloud. Detta är samma kontouppgifter som du skapade när du satte upp din första MEATER termometer."
+  },
+  "apiinfo": {
+    "title": "Viktig information",
+    "information1": "Kommunikationen med din MEATER-enhet sker via MEATER Cloud API. Säkerhetställ att du har skapat ditt konto i MEATER Cloud, aktiverat MEATER Cloud i MEATER-appen på din telefon samt fyllt i sina kontouppgifter på inställningssidan.",
+    "information2": "Nedan finns information från MEATER om vad som krävs för att din MEATER-enhet ska bli tillgänglig via Cloud API:",
+    "information3": "Enheter kommer endast bli tillgängliga via MEATER Cloud API när du gjort följande. Det kan också ta en stund innan din enhet blir tillgänglig via MEATER Cloud API.",
+    "b1": "Enheten måste finnas i MEATER Cloud. Slutför en tillagning medans din enhet är uppkopplad mot MEATER Cloud.",
+    "b2": "Din MEATER app/block måste ha en aktiv anslutning via Bluetooth till din enhet.",
+    "b3": "Din MEATER app/block måste ha en aktiv anslutning till MEATER Cloud."
+  },
+  "instructions": {
+    "title": "Aktivera din enhet",
+    "information1": "För att din enhet ska kunna registreras i Homey krävs det att du först aktiverar den och att den är tillgänglig via MEATER Cloud API.",
+    "information2": "Följ instruktionerna nedan för att göra din enhet tillgänglig för registrering.",
+    "instructiontitle": "Aktivera enhet",
+    "b1": "Starta MEATER App på din mobiltelefon.",
+    "b2": "Ta ut termometern ur laddaren.",
+    "b3": "Vänta tills enheten får kontakt med din telefon och är tillgänglig i appen på telefonen.",
+    "footer": "När du gjort detta, klicka på Nästa för att söka efter din enhet."
+  }
+}

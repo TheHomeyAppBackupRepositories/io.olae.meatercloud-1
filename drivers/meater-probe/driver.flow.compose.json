@@ -1,0 +1,173 @@
+{
+  "triggers": [
+    {
+      "id": "measure_internal_changed",
+      "title": {
+        "en": "Internal temperature changed",
+        "sv": "Innertemperatur ändrades"
+      },
+      "tokens": [
+        {
+          "name": "temperature",
+          "type": "number",
+          "title": {
+            "en": "temperature",
+            "se": "temperatur"
+          },
+          "example": 37.5
+        }
+      ],
+      "args": []
+    },
+    {
+      "id": "measure_ambient_changed",
+      "title": {
+        "en": "Ambient temperature changed",
+        "sv": "Omgivande temperatur ändrades"
+      },
+      "tokens": [
+        {
+          "name": "temperature",
+          "type": "number",
+          "title": {
+            "en": "temperature",
+            "se": "temperatur"
+          },
+          "example": 37.5
+        }
+      ],
+      "args": []
+    },
+    {
+      "id": "measure_target_changed",
+      "title": {
+        "en": "Target temperature changed",
+        "sv": "Måltemperatur ändrades"
+      },
+      "tokens": [
+        {
+          "name": "temperature",
+          "type": "number",
+          "title": {
+            "en": "temperature",
+            "se": "temperatur"
+          },
+          "example": 37.5
+        }
+      ],
+      "args": []
+    },
+    {
+      "id": "measure_peak_changed",
+      "title": {
+        "en": "Peak temperature changed",
+        "sv": "Högsta temperatur ändrades"
+      },
+      "tokens": [
+        {
+          "name": "temperature",
+          "type": "number",
+          "title": {
+            "en": "temperature",
+            "se": "temperatur"
+          },
+          "example": 37.5
+        }
+      ],
+      "args": []
+    },
+    {
+      "id": "cook_name_configured",
+      "title": {
+        "en": "Cook name configured",
+        "sv": "Tillagningsnamn satt"
+      },
+      "tokens": [
+        {
+          "name": "name",
+          "type": "string",
+          "title": {
+            "en": "name",
+            "se": "namn"
+          },
+          "example": "Beef"
+        }
+      ],
+      "args": []
+    },
+    {
+      "id": "time_elapsed_changed",
+      "title": {
+        "en": "Elapsed time changed",
+        "sv": "Tid ändrades"
+      },
+      "tokens": [
+        {
+          "name": "minutes",
+          "type": "number",
+          "title": {
+            "en": "time in minutes",
+            "se": "tid i minuter"
+          },
+          "example": 73
+        },
+        {
+          "name": "seconds",
+          "type": "number",
+          "title": {
+            "en": "time in seconds",
+            "se": "tid i sekunder"
+          },
+          "example": 930
+        },
+        {
+          "name": "time_in_text",
+          "type": "string",
+          "title": {
+            "en": "time in text",
+            "se": "tid i textform"
+          },
+          "example": "1h 37min"
+        }
+      ],
+      "args": []
+    },
+    {
+      "id": "time_remaining_changed",
+      "title": {
+        "en": "Remaining time changed",
+        "sv": "Kvarvarande tid ändrades"
+      },
+      "tokens": [
+        {
+          "name": "minutes",
+          "type": "number",
+          "title": {
+            "en": "time in minutes",
+            "se": "tid i minuter"
+          },
+          "example": 73
+        },
+        {
+          "name": "seconds",
+          "type": "number",
+          "title": {
+            "en": "time in seconds",
+            "se": "tid i sekunder"
+          },
+          "example": 930
+        },
+        {
+          "name": "time_in_text",
+          "type": "string",
+          "title": {
+            "en": "time in text",
+            "se": "tid i textform"
+          },
+          "example": "1h 37min"
+        }
+      ],
+      "args": []
+    }
+  ]
+}

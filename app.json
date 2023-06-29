@@ -1,0 +1,395 @@
+{
+  "_comment": "This file is generated. Please edit .homeycompose/app.json instead.",
+  "id": "io.olae.meatercloud",
+  "version": "0.1.2",
+  "compatibility": ">=5.0.0",
+  "sdk": 3,
+  "name": {
+    "en": "Meater Cloud"
+  },
+  "description": {
+    "en": "Monitor your cooking from anywhere",
+    "sv": "Övervaka din matlagning från hela världen"
+  },
+  "category": [
+    "appliances"
+  ],
+  "brandColor": "#ce0d2c",
+  "permissions": [],
+  "images": {
+    "small": "/assets/images/small.png",
+    "large": "/assets/images/large.png",
+    "xlarge": "/assets/images/xlarge.png"
+  },
+  "author": {
+    "name": "Ola Eriksson",
+    "email": "ola.eriksson@gmail.com"
+  },
+  "flow": {
+    "triggers": [
+      {
+        "id": "measure_internal_changed",
+        "title": {
+          "en": "Internal temperature changed",
+          "sv": "Innertemperatur ändrades"
+        },
+        "tokens": [
+          {
+            "name": "temperature",
+            "type": "number",
+            "title": {
+              "en": "temperature",
+              "se": "temperatur"
+            },
+            "example": 37.5
+          }
+        ],
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=meater-probe"
+          }
+        ]
+      },
+      {
+        "id": "measure_ambient_changed",
+        "title": {
+          "en": "Ambient temperature changed",
+          "sv": "Omgivande temperatur ändrades"
+        },
+        "tokens": [
+          {
+            "name": "temperature",
+            "type": "number",
+            "title": {
+              "en": "temperature",
+              "se": "temperatur"
+            },
+            "example": 37.5
+          }
+        ],
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=meater-probe"
+          }
+        ]
+      },
+      {
+        "id": "measure_target_changed",
+        "title": {
+          "en": "Target temperature changed",
+          "sv": "Måltemperatur ändrades"
+        },
+        "tokens": [
+          {
+            "name": "temperature",
+            "type": "number",
+            "title": {
+              "en": "temperature",
+              "se": "temperatur"
+            },
+            "example": 37.5
+          }
+        ],
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=meater-probe"
+          }
+        ]
+      },
+      {
+        "id": "measure_peak_changed",
+        "title": {
+          "en": "Peak temperature changed",
+          "sv": "Högsta temperatur ändrades"
+        },
+        "tokens": [
+          {
+            "name": "temperature",
+            "type": "number",
+            "title": {
+              "en": "temperature",
+              "se": "temperatur"
+            },
+            "example": 37.5
+          }
+        ],
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=meater-probe"
+          }
+        ]
+      },
+      {
+        "id": "cook_name_configured",
+        "title": {
+          "en": "Cook name configured",
+          "sv": "Tillagningsnamn satt"
+        },
+        "tokens": [
+          {
+            "name": "name",
+            "type": "string",
+            "title": {
+              "en": "name",
+              "se": "namn"
+            },
+            "example": "Beef"
+          }
+        ],
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=meater-probe"
+          }
+        ]
+      },
+      {
+        "id": "time_elapsed_changed",
+        "title": {
+          "en": "Elapsed time changed",
+          "sv": "Tid ändrades"
+        },
+        "tokens": [
+          {
+            "name": "minutes",
+            "type": "number",
+            "title": {
+              "en": "time in minutes",
+              "se": "tid i minuter"
+            },
+            "example": 73
+          },
+          {
+            "name": "seconds",
+            "type": "number",
+            "title": {
+              "en": "time in seconds",
+              "se": "tid i sekunder"
+            },
+            "example": 930
+          },
+          {
+            "name": "time_in_text",
+            "type": "string",
+            "title": {
+              "en": "time in text",
+              "se": "tid i textform"
+            },
+            "example": "1h 37min"
+          }
+        ],
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=meater-probe"
+          }
+        ]
+      },
+      {
+        "id": "time_remaining_changed",
+        "title": {
+          "en": "Remaining time changed",
+          "sv": "Kvarvarande tid ändrades"
+        },
+        "tokens": [
+          {
+            "name": "minutes",
+            "type": "number",
+            "title": {
+              "en": "time in minutes",
+              "se": "tid i minuter"
+            },
+            "example": 73
+          },
+          {
+            "name": "seconds",
+            "type": "number",
+            "title": {
+              "en": "time in seconds",
+              "se": "tid i sekunder"
+            },
+            "example": 930
+          },
+          {
+            "name": "time_in_text",
+            "type": "string",
+            "title": {
+              "en": "time in text",
+              "se": "tid i textform"
+            },
+            "example": "1h 37min"
+          }
+        ],
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=meater-probe"
+          }
+        ]
+      }
+    ]
+  },
+  "drivers": [
+    {
+      "name": {
+        "en": "Meater Probe",
+        "sv": "Meater köttermometer"
+      },
+      "class": "other",
+      "capabilities": [
+        "measure_internal",
+        "measure_ambient",
+        "measure_target",
+        "measure_peak",
+        "time_elapsed",
+        "time_remaining",
+        "cook_name"
+      ],
+      "images": {
+        "small": "/drivers/meater-probe/assets/images/small.png",
+        "large": "/drivers/meater-probe/assets/images/large.png",
+        "xlarge": "/drivers/meater-probe/assets/images/xlarge.png"
+      },
+      "pair": [
+        {
+          "id": "check_auth"
+        },
+        {
+          "id": "api_info",
+          "navigation": {
+            "next": "instructions"
+          }
+        },
+        {
+          "id": "instructions",
+          "navigation": {
+            "next": "list_devices"
+          }
+        },
+        {
+          "id": "list_devices",
+          "template": "list_devices",
+          "navigation": {
+            "next": "add_meater_probes"
+          }
+        },
+        {
+          "id": "add_meater_probes",
+          "template": "add_devices"
+        }
+      ],
+      "id": "meater-probe"
+    }
+  ],
+  "capabilities": {
+    "cook_name": {
+      "type": "string",
+      "title": {
+        "en": "Cooking",
+        "sv": "Tillagar"
+      },
+      "getable": true,
+      "setable": false,
+      "icon": "assets/name.svg"
+    },
+    "measure_ambient": {
+      "type": "number",
+      "title": {
+        "en": "Ambient temperature",
+        "sv": "Omgivningstemp"
+      },
+      "insights": true,
+      "decimals": 1,
+      "chartType": "spline",
+      "getable": true,
+      "setable": false,
+      "uiComponent": "sensor",
+      "units": "C",
+      "min": 0,
+      "max": 275,
+      "icon": "assets/ambient.svg"
+    },
+    "measure_internal": {
+      "type": "number",
+      "title": {
+        "en": "Internal temp",
+        "sv": "Innertemperatur"
+      },
+      "insights": true,
+      "decimals": 1,
+      "chartType": "spline",
+      "getable": true,
+      "setable": false,
+      "uiComponent": "sensor",
+      "units": "C",
+      "min": 0,
+      "max": 100,
+      "icon": "assets/internal.svg"
+    },
+    "measure_peak": {
+      "type": "number",
+      "title": {
+        "en": "Peak temp",
+        "sv": "Högsta temp"
+      },
+      "insights": true,
+      "decimals": 1,
+      "chartType": "spline",
+      "getable": true,
+      "setable": false,
+      "uiComponent": "sensor",
+      "units": "C",
+      "min": 0,
+      "max": 100,
+      "icon": "assets/peak.svg"
+    },
+    "measure_target": {
+      "type": "number",
+      "title": {
+        "en": "Target temp",
+        "sv": "Måltemperatur"
+      },
+      "insights": false,
+      "decimals": 0,
+      "chartType": "spline",
+      "getable": true,
+      "setable": false,
+      "uiComponent": "sensor",
+      "units": "C",
+      "min": 0,
+      "max": 100,
+      "icon": "assets/target.svg"
+    },
+    "time_elapsed": {
+      "type": "string",
+      "title": {
+        "en": "elapsed",
+        "sv": "har gått"
+      },
+      "getable": true,
+      "setable": false,
+      "icon": "assets/elapsed.svg"
+    },
+    "time_remaining": {
+      "type": "string",
+      "title": {
+        "en": "remaining",
+        "sv": "kvarvarande"
+      },
+      "getable": true,
+      "setable": false,
+      "icon": "assets/remaining.svg"
+    }
+  }
+}

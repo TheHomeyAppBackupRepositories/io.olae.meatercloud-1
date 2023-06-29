@@ -1,0 +1,49 @@
+{
+  "name": {
+    "en": "Meater Probe",
+    "sv": "Meater köttermometer"
+  },
+  "class": "other",
+  "capabilities": [
+    "measure_internal",
+    "measure_ambient",
+    "measure_target",
+    "measure_peak",
+    "time_elapsed",
+    "time_remaining",
+    "cook_name"
+  ],
+  "images": {
+    "small": "/drivers/meater-probe/assets/images/small.png",
+    "large": "/drivers/meater-probe/assets/images/large.png",
+    "xlarge": "/drivers/meater-probe/assets/images/xlarge.png"
+  },
+  "pair": [
+    {
+      "id": "check_auth"
+    },
+    {
+      "id": "api_info",
+      "navigation": {
+        "next": "instructions"
+      }
+    },
+    {
+      "id": "instructions",
+      "navigation": {
+        "next": "list_devices"
+      }
+    },
+    {
+      "id": "list_devices",
+      "template": "list_devices",
+      "navigation": {
+        "next": "add_meater_probes"
+      }
+    },
+    {
+      "id": "add_meater_probes",
+      "template": "add_devices"
+    }
+  ]
+}
